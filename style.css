@@ -1,0 +1,130 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-image: linear-gradient(219deg, #654FFA 30%, #3338BB 74%);
+}
+.wrapper{
+    max-width: 90%;
+    width: 100%;
+    min-height: 95vh;
+    background-color: #ffffff;
+    backdrop-filter: blur(10px);
+    border-radius: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 30px;
+    position: relative;
+    padding:2rem;
+
+}
+.blob_container{
+flex :2 ;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.wrapper .blob{
+   width:550px;
+   height:550px;
+    background-image: linear-gradient(90deg, #F51176 0%, #EC19CD 74%);
+    box-shadow: 0 0 40px #EC19CD99;
+}
+.title{
+  text-align: center;
+  color: #111;
+  font-size: 32px;
+  margin-bottom: 20px;
+}
+
+  .sliders{
+    flex :1;
+}
+.sliders .slider{
+  margin-bottom: 2rem;
+}
+.sliders .slider label{
+  font-size: 18px;
+  margin-bottom: 10px;
+  display: block;
+}
+.sliders .slider::before{
+  content: attr(data-attr)' %';
+  position: absolute;
+  width: 50px;
+  height: 20px;
+  right: 25px;
+  font-size: 16px;
+  z-index: 100000;
+}
+.slider.width::before,
+.slider.height::before{
+  content: attr(data-attr)' px';
+}
+  .range {
+    width: 100%;
+    height: 15px;
+    -webkit-appearance: none;
+    background: #111;
+    outline: none;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: inset 0 0 5px rgba(0, 0, 0, 1);
+  }
+  .range::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    background-image: linear-gradient(90deg, #F51176 0%, #EC19CD 74%);
+    cursor: pointer;
+    border: 4px solid #333;
+    box-shadow: -407px 0 0 400px #EC19CD;
+    position: relative;
+  }
+  .output{
+    position: relative;
+    padding: 25px;
+    border: 1px solid rgb(218, 218, 218);
+  }
+  .output #code{
+    font-size: 20px;
+    font-weight: bold;
+    letter-spacing: 1.1px;
+    text-transform:lowercase;
+    background: -webkit-linear-gradient(45deg,#F51176, #3338BB);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    position: relative;
+    }
+    .copy{
+      position: absolute;
+      width: 15px;
+      height: 20px;
+      border-radius: 1px;
+      border: 2px solid #555;
+      right:10px;
+      top: 10px;
+      background: rgb(190, 190, 190);
+      cursor: pointer;
+    }
+    .copy::before{
+      content: "";
+      position: absolute;
+      width: 11px;
+      height: 16px;
+      border-radius: 1px;
+      border: 2px solid #555;
+      top: -5px;
+      left: -6px;
+    }
